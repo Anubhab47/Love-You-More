@@ -125,7 +125,7 @@
   </style>
 </head>
 <body>
-  <audio src="music.mp3" id="linkmp3"></audio>
+  <audio src="music.mp3" id="linkmp3" loop></audio>
   
   <div class="background-overlay" data-src="7e359ff9cece12b0feae48230aa5499c.jpg"></div>
 
@@ -213,7 +213,8 @@
 
   <script>
     // Permulaan
-    audio = new Audio('' + linkmp3.src); 
+    audio = new Audio('' + linkmp3.src);
+    audio.loop = true;
     document.querySelector("#hal1").style="transform:scale(0)";
     document.querySelector(".circ").style="display:none";
     setTimeout(()=>{document.querySelector("#hal1").style="transform:scale(1)";document.querySelector(".circ").style="";stiker1.style = "transform:scale(1)";}, 1000);
